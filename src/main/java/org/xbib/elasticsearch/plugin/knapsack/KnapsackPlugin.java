@@ -81,8 +81,8 @@ public class KnapsackPlugin extends Plugin {
     public void onModule(RestModule module) {
         if (settings.getAsBoolean("plugins.knapsack.enabled", true)) {
             module.addRestAction(RestKnapsackExportAction.class);
-            module.addRestAction(RestKnapsackImportAction.class);
             module.addRestAction(RestKnapsackPushAction.class);
+            module.addRestAction(RestKnapsackImportAction.class);
             module.addRestAction(RestKnapsackPullAction.class);
             module.addRestAction(RestKnapsackStateAction.class);
             module.addRestAction(RestKnapsackAbortAction.class);
