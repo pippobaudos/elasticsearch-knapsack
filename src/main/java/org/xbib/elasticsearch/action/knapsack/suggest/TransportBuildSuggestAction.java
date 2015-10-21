@@ -31,12 +31,8 @@ import org.elasticsearch.node.service.NodeService;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.aggregations.AggregationBuilders;
 import org.elasticsearch.search.aggregations.bucket.terms.Terms;
-import org.elasticsearch.search.aggregations.bucket.terms.TermsAggregator;
 import org.elasticsearch.threadpool.ThreadPool;
 import org.joda.time.DateTime;
-import org.xbib.elasticsearch.action.knapsack.suggest.BuildSuggestAction;
-import org.xbib.elasticsearch.action.knapsack.suggest.BuildSuggestRequest;
-import org.xbib.elasticsearch.action.knapsack.suggest.BuildSuggestResponse;
 import org.xbib.elasticsearch.knapsack.KnapsackParameter;
 import org.xbib.elasticsearch.knapsack.KnapsackService;
 import org.xbib.elasticsearch.knapsack.KnapsackState;
@@ -217,7 +213,7 @@ public class TransportBuildSuggestAction extends TransportAction<BuildSuggestReq
                 Collection<Terms.Bucket> buckets = terms.getBuckets();
                 for (Terms.Bucket bucket : buckets) {
 
-                    logger.debug("found {} aliases", bucket.getAggregations().);
+                    //logger.debug("found {} aliases", bucket.getAggregations().);
 
                 }
 
